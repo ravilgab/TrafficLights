@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,22 +14,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TvG-l6-nbX">
-                                <rect key="frame" x="129" y="74" width="156" height="543"/>
+                                <rect key="frame" x="143" y="30" width="128" height="446"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLC-TA-c59">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="161"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128.66666666666666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E14-xR-X1A">
-                                        <rect key="frame" x="0.0" y="191" width="156" height="161"/>
+                                        <rect key="frame" x="0.0" y="158.66666666666669" width="128" height="128.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-Dg-rj0">
-                                        <rect key="frame" x="0.0" y="382" width="156" height="161"/>
+                                        <rect key="frame" x="0.0" y="317.33333333333331" width="128" height="128.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -38,7 +38,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQq-y8-BlJ">
-                                <rect key="frame" x="129" y="782" width="156" height="55"/>
+                                <rect key="frame" x="129" y="656" width="156" height="55"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="6Kb-LT-BNz"/>
@@ -48,6 +48,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="colorSwitchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gj5-H2-NNF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -60,6 +63,12 @@
                             <constraint firstItem="TvG-l6-nbX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zrN-2f-JJe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorSwitchButton" destination="eQq-y8-BlJ" id="Kgz-Q8-UvB"/>
+                        <outlet property="greenLightView" destination="Kzj-Dg-rj0" id="Pa3-4i-w0V"/>
+                        <outlet property="redLightView" destination="WLC-TA-c59" id="EbA-HY-RL0"/>
+                        <outlet property="yellowLightView" destination="E14-xR-X1A" id="kdi-gG-MUC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
