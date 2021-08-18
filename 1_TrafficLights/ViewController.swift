@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var brightLight: CGFloat = 1
     var dimLight: CGFloat = 0.2
     
-    var counter = 0
+    var currentColor = "red"
     
     
     
@@ -50,26 +50,24 @@ class ViewController: UIViewController {
     @IBAction func colorSwitchButtonPressed(_ sender: UIButton) {
         colorSwitchButton.setTitle("Next", for: .normal)
         
-        switch counter {
-        case 0:
+        switch currentColor {
+        case "red":
             redLightView.alpha = brightLight
             greenLightView.alpha = dimLight
-            counter += 1
-        case 1:
+            currentColor = "yellow"
+        case "yellow":
             yellowLightView.alpha = brightLight
             redLightView.alpha = dimLight
-            counter += 1
-        case 2:
+            currentColor = "green"
+        case "green":
             greenLightView.alpha = brightLight
             yellowLightView.alpha = dimLight
-            counter -= 2
+            currentColor = "red"
         default:
             break
         }
         
-        
     }
     
-
 }
 
